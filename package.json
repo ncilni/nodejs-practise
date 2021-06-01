@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-practise",
+  "version": "1.0.0",
+  "description": "poc practice app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncilni/nodejs-practise.git"
+  },
+  "author": "Neeraj Chauhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncilni/nodejs-practise/issues"
+  },
+  "homepage": "https://github.com/ncilni/nodejs-practise#readme",
+  "dependencies": {
+    "mongoose": "~5.12.12",
+    "underscore": "~1.13.1"
+  }
+}
