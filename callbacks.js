@@ -1,10 +1,24 @@
 console.log("Before");
 
-getUser(1)
-  .then((user) => getRepositories(user.gitUserName))
-  .then((repos) => getCommits(repos[0]))
-  .then((commits) => console.log("Commits", commits))
-  .catch((err) => console.log("error", err));
+// getUser(1)
+//   .then((user) => getRepositories(user.gitUserName))
+//   .then((repos) => getCommits(repos[0]))
+//   .then((commits) => console.log("Commits", commits))
+//   .catch((err) => console.log("error", err));
+
+// async await approach
+async function displayCommits() {
+  try {
+    const user = await getUser(1);
+    const repos = await getRepositories(user.gitUserName);
+    const commits = await getCommits(repos[0]);
+    console.log(`commits: ${commits}`);
+  } catch (err) {
+    console.log("Error:", err);
+  }
+}
+
+displayCommits();
 
 function getUser(id) {
   return new Promise((resolve, reject) => {
